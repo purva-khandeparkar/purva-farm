@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* ================================
+   Light theme (default)
+================================ */
+:root {
+  --color-primary: #97a879;
+  --color-primary-dark: #6a7a4e;
+
+  --color-heading: #162200;
+  --color-text: #4b5b31;
+  --color-muted: #8b9b6e;
+
+  --color-soft: #d0e1b0;
+  --color-bg: #ffffff;
+  --color-bg-soft: #eeffce;
+}
+
+/* ================================
+   Dark theme
+================================ */
+.dark {
+  --color-primary: #97a879;
+  --color-primary-dark: #6a7a4e;
+
+  --color-heading: #d0e1b0;
+  --color-text: #adbe8e;
+  --color-muted: #8b9b6e;
+
+  --color-soft: #4b5b31;
+  --color-bg: #162200;
+}
+
+/* ================================
+   Base styles
+================================ */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
