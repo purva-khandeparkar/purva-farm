@@ -1,0 +1,68 @@
+name: Next.js CI Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+      - '**'
+  push:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ---------- LINTING ----------
+      - name: Run strict lint
+        id: strict_lint
+        run: npm run lint
+
+      # Fallback/global lint if strict lint fails
+      - name: Run global lint (fallback)
+        if: failure()
+        run: |
+          echo "Strict lint failed. Running global lint..."
+          npm run lint -- --fix
+
+      # ---------- BUILD ----------
+      - name: Build project
+        run: npm run build
+
+  notify-on-failure:
+    needs: ci
+    if: failure() && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send failure email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "🚨 CI Failed on main branch"
+          body: |
+            CI pipeline failed on the main branch.
+            Deployment to Vercel was blocked.
+
+            Repository: ${{ github.repository }}
+            Commit: ${{ github.sha }}
+            Workflow: ${{ github.workflow }}
+
+          to: your-email@example.com
+          from: CI Notifier <ci@example.com>
