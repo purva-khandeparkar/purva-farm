@@ -38,35 +38,6 @@ jobs:
           echo "Strict lint failed. Running global lint..."
           npm run lint -- --fix
 
-      - name: Force CI failure (test)
-        run: exit 1
-
       # ---------- BUILD ----------
       - name: Build project
         run: npm run build
-
-  notify-on-failure:
-    needs: workflow
-    if: failure() && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Send failure email notification
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 587
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "Workflow failed on main branch"
-          body: |
-            Workflow CI pipeline failed on the main branch.
-            Deployment to Vercel was blocked.
-
-            Repository: ${{ github.repository }}
-            Commit: ${{ github.sha }}
-            Triggered by: ${{ github.actor }}
-            Workflow: ${{ github.workflow }}
-
-          to: purva.khandeparkar@gmail.com
-          from: Workflow Notifier purva-khandeparkar
