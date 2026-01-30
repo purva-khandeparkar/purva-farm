@@ -1,6 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { HeroWaveBackground } from "@/components/sections/HeroWaveBackground";
+import { HeroWaveBackground } from "@/components/home/sections/HeroWaveBackground";
 
 export default function RootLayout({
   children,

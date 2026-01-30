@@ -1,0 +1,140 @@
+{
+  "categories": [
+    {
+      "id": "tree-climbers",
+      "title": "Tree Climbers",
+      "products": [
+        {
+          "id": "arecanut-climber-harvest",
+          "name": "Arecanut Tree Climber With Harvesting Attachment",
+          "image": "arecanut-climber-harvest.png"
+        },
+        {
+          "id": "coconut-climber",
+          "name": "Coconut Tree Climber",
+          "image": "coconut-climber.png"
+        },
+        {
+          "id": "coconut-climber-ss",
+          "name": "Coconut Tree Climber SS",
+          "image": "coconut-climber-ss.png"
+        },
+        {
+          "id": "motorized-arecanut-climber",
+          "name": "Motorized Arecanut Tree Climber",
+          "image": "motorized-arecanut-climber.png"
+        },
+        {
+          "id": "standing-coconut-climber",
+          "name": "Standing Type Coconut Tree Climber",
+          "image": "standing-coconut-climber.png"
+        }
+      ]
+    },
+    {
+      "id": "agri-shredders",
+      "title": "Agricultural Shredders",
+      "products": [
+        {
+          "id": "cs-21",
+          "name": "CS-21 Chipper Shredder",
+          "image": "cs-21-shredder.png"
+        },
+        {
+          "id": "cs-33",
+          "name": "CS-33 Chipper Shredder",
+          "image": "cs-33-shredder.png"
+        },
+        {
+          "id": "cs-50t",
+          "name": "CS-50/T Chipper Shredder",
+          "image": "cs-50t-shredder.png"
+        }
+      ]
+    },
+    {
+      "id": "fruit-saat",
+      "title": "Fruit Saat",
+      "products": [
+        {
+          "id": "jambool-saat",
+          "name": "Jambool Saat",
+          "image": "jambool-saat.png"
+        },
+        {
+          "id": "mango-saat",
+          "name": "Mango Saat",
+          "image": "mango-saat.png"
+        },
+        {
+          "id": "phanas-saat",
+          "name": "Phanas Saat",
+          "image": "phanas-saat.png"
+        }
+      ]
+    },
+    {
+      "id": "vermicompost",
+      "title": "Organic Vermicompost",
+      "products": [
+        {
+          "id": "vermi-1kg",
+          "name": "Vermicompost - 1 Kg Pack",
+          "image": "vermicompost-1kg.png"
+        },
+        {
+          "id": "vermi-5kg",
+          "name": "Vermicompost - 5 Kg Pack",
+          "image": "vermicompost-5kg.png"
+        },
+        {
+          "id": "vermi-40kg",
+          "name": "Vermicompost - 40 Kg Bag",
+          "image": "vermicompost-40kg.png"
+        }
+      ]
+    },
+    {
+      "id": "cocopeat",
+      "title": "Cocopeat Powder",
+      "products": [
+        {
+          "id": "coco-chips",
+          "name": "Coconut Husk Chips - 250 Gms",
+          "image": "cocopeat-chips-250g.png"
+        },
+        {
+          "id": "coco-powder-1kg",
+          "name": "Cocopeat (Powder) - 1 Kg Pack",
+          "image": "cocopeat-powder-1kg.png"
+        },
+        {
+          "id": "coco-blocks",
+          "name": "Cocopeat Blocks",
+          "image": "cocopeat-blocks.png"
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "title": "Other Products",
+      "products": [
+        {
+          "id": "jambool-seed-powder",
+          "name": "Jambool Seed Powder",
+          "image": "jambool-seed-powder.png"
+        },
+        {
+          "id": "husk-peeler",
+          "name": "Heavy Coconut Husk Peeler",
+          "image": "coconut-husk-peeler.png"
+        },
+        {
+          "id": "slurry-tank",
+          "name": "Slurry Filtration Tank",
+          "image": "slurry-filtration-tank.png"
+        }
+      ]
+    }
+  ]
+}
